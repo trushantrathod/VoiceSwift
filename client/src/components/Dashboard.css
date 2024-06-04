@@ -1,0 +1,63 @@
+.dashboard {
+  background-color: #6d6d6d00;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Add scrollbar for vertical overflow */
+  max-height: 80vh; /* Limit the maximum height to allow scrolling */
+}
+
+.dashboard-title {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.dashboard-options {
+  display: flex;
+  gap: 30px;
+  width: 100%; /* Ensure options take full width */
+}
+
+.dashboard-options {
+  flex: 1; /* Distribute available space equally among options */
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-options > * {
+  flex: 1; /* Grow to fill available space */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #a3a3a3; /* White background for options */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box-shadow */
+}
+
+.dashboard-options > *:hover {
+  transform: translateY(-5px);
+  background-color: #a3a3a3; /* Light gray background on hover */
+}
+
+
+.audio-recorder {
+  background-color: #a3a3a3; /* Sky blue for audio recorder */
+}
+
+
+/* Add media query for responsiveness */
+@media screen and (min-width: 768px) {
+  .dashboard-options {
+    flex-direction: row;
+    justify-content: space-around; /* Align items evenly along the main axis */
+  }
+
+  .dashboard-option > * {
+    width: auto;
+  }
+}

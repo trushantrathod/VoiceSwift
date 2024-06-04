@@ -1,0 +1,59 @@
+.report {
+  height: 100vh; /* Set full screen height */
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+}
+
+.view-report-title {
+  color: #fdfdfd; /* Change the color to your desired color */
+  background-color: rgb(66, 66, 66);
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 10px;
+}
+
+/* Individual report item styles */
+.report-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Add transition effect for transform property */
+}
+
+/* Change scale on hover */
+.report-item:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+
+/* Report container styles */
+.report-container {
+  background-color: #ffffff84; /* Light blue background color */
+  padding: 10px; /* Add padding for spacing */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+/* Heading styles */
+.transcript h3,
+.sentiment h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* Add animation for report item */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.report-item {
+  animation: fadeIn 0.5s ease forwards; /* Apply fade-in animation */
+}
+
+/* Style specifically for the "View Reports" box */
+.view-report {
+  background-color: #98fb98; /* Light green background color */
+}

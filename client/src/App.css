@@ -1,0 +1,61 @@
+.voicesift {
+  font-family: 'Montserrat', sans-serif; /* Specify your desired font */
+  font-size: 24px; /* Adjust font size as needed */
+  animation: fadeInDown 1s ease; /* Add animation for entrance */
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.custom-navbar {
+  background-color: #0f0f0f7f; /* Change the background color to your desired color */
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-weight: bold;
+  color: white !important;
+  transition: background-color 0.3s ease; /* Add transition effect */
+  position: relative; /* Position relative for absolute positioning of hover box */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #373737c3; /* Change background color on hover */
+}
+
+/* Style for the hover box */
+.navbar-nav .nav-item .nav-link::after {
+  content: ''; /* Add content for pseudo-element */
+  position: absolute;
+  bottom: -5px; /* Adjust the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Full width */
+  height: 3px; /* Height of the hover box */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease; /* Add transition effect */
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.voicesift {
+  color: white !important; /* Change text color to white */
+  font-style: italic; /* Make text italic */
+}
